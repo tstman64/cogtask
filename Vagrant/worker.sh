@@ -15,6 +15,4 @@ cat > /etc/docker/daemon.json <<EOF
 }
 EOF
 systemctl restart docker
-docker run --name docker-nginx -p 8000:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
 cat /vagrant/token | sh
-

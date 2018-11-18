@@ -19,5 +19,3 @@ docker run --rm -d -p 8080:8080 -v jenkins-data:/var/jenkins_home -v /var/run/do
 docker run -d --publish 5000:5000 --restart=always --name registry -v /opt/registry:/var/lib/registry registry:2
 docker swarm init --advertise-addr 192.168.18.10
 docker swarm join-token worker | grep docker > /vagrant/token
-docker run --name docker-nginx -p 8000:80 -d -v ~/docker-nginx/html:/usr/share/nginx/html nginx
-
